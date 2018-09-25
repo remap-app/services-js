@@ -17,3 +17,9 @@ import { Restaurants } from '@remap/services'
   const res = await Restaurants.getList({} as IQuery)
 })()
 ```
+
+### API
+
+- Restaurants
+- Stocks
+- Authentication
