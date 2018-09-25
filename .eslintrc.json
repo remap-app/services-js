@@ -1,0 +1,33 @@
+{
+  "parser": "typescript-eslint-parser",
+  "plugins": ["typescript"],
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "semi": ["error", "never"],
+    "comma-dangle": [2, {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "functions": "never",
+      "imports": "always-multiline",
+      "exports": "always-multiline"
+    }],
+    "typescript/no-unused-vars": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ]
+}
