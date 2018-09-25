@@ -36,6 +36,9 @@ jobs:
           name: ESLint
           command: yarn run lint
       - run:
+          name: Type Check
+          command: yarn run tsc
+      - run:
           name: Test
           command: yarn test
       - save_cache: *save_yarn_cache

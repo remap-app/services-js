@@ -9,6 +9,7 @@ LATEST_VERSION=`npm v ${PACKAGE_NAME} version 2>/dev/null || exit 0`
 if [[ "$LATEST_VERSION" = "$NEW_VERSION" ]]; then
   echo "${NEW_VERSION} exists. It was skip publishing."
 else
+  NODE_ENV=production npm run build
   npm publish --access=public
   TAG=v${NEW_VERSION}
   git tag $TAG
