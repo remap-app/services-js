@@ -35,7 +35,7 @@ export interface IRestaurant {
 
 export class Restaurants extends Base {
   private static get origin() {
-    return process.env.RESTAURANTS_SERVICE_ORIGIN || RESTAURANTS_SERVICE_ORIGIN
+    return process.env.REMAP_RESTAURANTS_SERVICE_ORIGIN || RESTAURANTS_SERVICE_ORIGIN
   }
 
   public static async getList(query: IQuery): Promise<IRestaurant[]> {
