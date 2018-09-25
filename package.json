@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "test": "ava-ts",
-    "lint": "eslint src/*",
+    "lint": "eslint src/* test.ts",
     "clean:lib": "if [ -d lib ]; then rm -rf lib; fi",
     "prebuild": "npm run clean:lib",
     "build": "babel src --out-dir lib --extensions '.ts'",
