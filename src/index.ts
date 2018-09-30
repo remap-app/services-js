@@ -1,3 +1,2 @@
-export { Restaurants } from './Restaurants'
-export { Stocks } from './Stocks'
-export { Authentication } from './Authentication'
+export { ReMap as default } from './ReMap'
+export { ReMap } from './ReMap'

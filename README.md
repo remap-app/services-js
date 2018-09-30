@@ -11,15 +11,29 @@ yarn add @remap/services
 ## Usage
 
 ```typescript
-import { Restaurants } from '@remap/services'
+import ReMap, { Restaurant, RestaurantsSearchQuery } from '@remap/services'
+
+const client: ReMap = new ReMap()
 
 (async () => {
-  const res = await Restaurants.getList({} as IQuery)
+  const res: Restaurant[] = await client.getRestaurants({} as RestaurantsSearchQuery)
 })()
 ```
 
-### API
+### APIs
 
-- Restaurants
-- Stocks
-- Authentication
+#### Restaurant
+
+- `client.getRestaurants()`
+- `client.getRestaurantById()`
+
+#### Stocks
+
+- `client.createStock()`
+- `client.getStocks()`
+- `client.getStockById()`
+- `client.deleteStockById()`
+
+#### Authentication
+
+- `client.authenticate()`
